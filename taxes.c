@@ -14,3 +14,10 @@ int main(int argc, char **argv) {
   double childCredit = 0.0;
   double totalTax = 0.0;
   int numChildren = 0;
+   printf("Please enter your adjusted gross income (AGI): ");
+  scanf("%lf", &agi);
+ 
+  getchar(); 
+
+  printf("Do you have any children? (Y) or (N)? ");
+  c = getchar();
