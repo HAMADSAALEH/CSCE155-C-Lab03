@@ -21,3 +21,17 @@ int main(int argc, char **argv) {
 
   printf("Do you have any children? (Y) or (N)? ");
   c = getchar();
+  if(c == 'y' || c == 'Y') {
+    printf("How many children do you have? ");
+    scanf("%d", &numChildren);
+  }
+
+  
+  if (agi <= 50000)
+  {
+    tax = agi * 0.10;
+  }
+  else if (agi <= 100000)
+  {
+    tax = 5000 + (agi - 50000) * 0.20;
+    
