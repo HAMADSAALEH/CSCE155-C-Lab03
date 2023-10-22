@@ -12,7 +12,6 @@
 #include <math.h>
 
 int main(int argc, char **argv) {
-
   double a, b, result;
   int choice;
 
@@ -32,19 +31,50 @@ int main(int argc, char **argv) {
   scanf("%d", &choice);
 
   if(choice == 1) {
-    printf("%f", a + b);
-  } else if(choice == 2) {
-    result = a - b;
-    printf("%f", result);
-  } else if(choice == 3) {
-    //TODO: handle this case (multiplication)
-  } else if(choice == 4) {
-    //TODO: handle this case (division)
-  } else if(choice == 5) {
-    //TODO: handle this case (minimum)
-  } else if(choice == 6) {
-    //TODO: handle this case (log_a(b))
+    if(a<0||b<0){
+    printf("ERROR: Both operands must be positive");
   } else {
+    result= a+b;
+    printf("%.2lf + %.2lf = %.2lf",a,b, result);
+    }
+}
+    else if(choice == 2) {
+    result = a - b;
+    printf("%.2lf", result);
+  } else if(choice == 3) {
+    result= a*b;
+    printf("%.2lf * %.2lf = %.2lf",a,b, result);
+  } else if(choice == 4) {
+    if(b==0)
+    {
+      printf("ERROR: Division by zero");
+    }
+    else
+    {
+      result=a/b;
+      printf("%.2lf / %.2lf = %.2lf",a,b, result);
+
+      }
+    
+  } 
+  else if(choice == 5) 
+  {
+    if(a>b){
+
+    printf("a is greater then b");
+    }
+      else
+{
+  printf("ERROR");
+}
+  }
+      else if(choice == 6)
+       {
+    result= log(a) /log(b);
+    printf("log_%.2lf(%.2lf)=%.2lf",b,a,result);
+  } 
+  else 
+  {
     printf("Please input a valid operator next time");
   }
 
