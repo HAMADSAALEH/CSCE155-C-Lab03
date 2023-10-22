@@ -94,4 +94,35 @@ int main(int argc, char **argv) {
     printf("FAILED!\n");
     numFailed = numFailed + 1;
   }
+  else
+  {
+    printf("PASSED!\n");
+    numPassed = numPassed + 1;
+  }
+
+  printf("\n\n");
+  printf("Summary:\n");
+  printf("Number of test cases passed: %d\n", numPassed);
+  printf("Number of test cases failed: %d\n", numFailed);
+  printf("Percentage Passed: %.2f%%\n", (double) numPassed / (numPassed + numFailed) * 100.0);
+
+  if(reportPass) {
+    return numPassed;
+  } else {
+    return numFailed;
+  }
+}
+
+int isLeapYear(int year) {
+   if(((year%4==0) && ((year%100!=0) || (year%400==0))))  
+    {
+    return 1;
+    }
+    else {
+      return 0;
+    }
+}
+
+
+
   
