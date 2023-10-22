@@ -74,6 +74,7 @@ int main(int argc, char **argv) {
     printf("log_%.2lf(%.2lf)=%.2lf",b,a,result);
   } 
   else 
+  
   {
     printf("Please input a valid operator next time");
   }
